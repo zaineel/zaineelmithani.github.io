@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatiable" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/162388e7b6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="/logo.PNG" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Full-Stack Developer</p>
+                <h1>Hi, I am <br><span>Zaineel Mithani</span></h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="../../Downloads/25aa3f03-773d-4837-9798-7807108af2d7.JPG">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title ">About Me</h1>
+                    <p>I am a Full-Stack Developer with a passion for creating beautiful and 
+                        functional websites. I have a Bachelor's Degree in Computer Science from t
+                        he University of Texas at Dallas. I am currently working as a freelance developer and 
+                        I am always interested in a challenge.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                        <p class="tab-links" onclick="openTab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Back-End Development</span><br>Java • Python • C++ • C# • Express • NodeJS</li>
+                            <li><span>Front-End Development</span><br>HTML • CSS • JavaScript • React • Bootstrap</li>
+                            <li><span>Database Management</span><br>MySQL • MongoDB • Firebase</li>
+                            <li><span>Mobile Development</span><br>React Native • SwiftUI • Flutter</li>
+                            <li><span>AI Development</span><br>TensorFlow • Keras • PyTorch</li>
+                            <li><span>Other</span><br>Git • GitHub • Replit • Heroku • Netlify • AWS • Azure<br>Kubernetes • Roboflow • Respell</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Freelance Web Developer</span><br>2021 - Present</li>
+                            <li><span>Software Engineer Intern</span><br>2021 - Present</li>
+                            <li><span>Software Engineer Intern</span><br>2020 - 2021</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>University of Texas at Dallas</span><br>Bachelor's Degree in Computer Science</li>
+                            <li><span>University of Texas at Dallas</span><br>Master's Degree in Computer Science</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title ">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>I can design beautiful and responsive websites for your business or personal use.</p>
+                    <a href='#'>Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-crop-simple"></i>
+                    <h2>UI/UX Design</h2>
+                    <p>I can design beautiful and responsive user interfaces for your business or personal use.</p>
+                    <a href='#'>Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-database"></i>
+                    <h2>Database Management</h2>
+                    <p>I can manage your database to ensure that your website is running smoothly.</p>
+                    <a href='#'>Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>App Designing</h2>
+                    <p>I can design beautiful and responsive mobile applications for your business or personal use.</p>
+                    <a href='#'>Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-tower-broadcast"></i>
+                    <h2>Web Hosting</h2>
+                    <p>I can host your website on a server to ensure that your website is always up and running.</p>
+                    <a href='#'>Learn more</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-robot"></i>
+                    <h2>AI Development</h2>
+                    <p>I can develop AI to help your business grow and to make your life easier.</p>
+                    <a href='#'>Learn more</a>
+                </div>   
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title ">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="../../Downloads/images/work-1.png">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>This website is a concept for a new social media app.</p>
+                        <a href='#'><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="../../Downloads/images/work-2.png">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>This website is a concept for a new music app.</p>
+                        <a href='#'><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="../../Downloads/images/work-3.png">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>This website is a concept for a new online shopping app.</p>
+                        <a href='#'><i class="fa-solid fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://devpost.com/zaineel-mithani?ref_content=user-portfolio&ref_feature=portfolio&ref_medium=global-nav" class="btn">View More</a>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <div class="social-icons">
+                        <a href="https://twitter.com/MithaniZaineel"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/zaineelmithani/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/zaineel-mithani-19588025b/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/zaineel"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <!--download tag is automatically download the file upon clicking -->
+                    <a href="../../Downloads/Networking Essentials 2.0 FAQ.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="message" rows="7" placeholder="Message" required></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2021 Zaineel Mithani. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        var tabLinks = document.getElementsByClassName("tab-links");
+        var tabContents = document.getElementsByClassName("tab-contents");
+
+        function openTab(tabName) {
+            for (tabLink of tabLinks) {
+                tabLink.classList.remove("active-link");
+            }
+            for (tabContent of tabContents) {
+                tabContent.classList.remove("active-tab");
+            } 
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabName).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwS28m3wJ0kv9O_RzViyz9mCeRUzAZHGInnoXFGTtVnYeDx0BW0rQSxLNnz67vOOofTGw/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById('msg')
+    
+        form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+            msg.innerHTML = "Thank you for your message! I will get back to you as soon as possible."
+            setTimeout(() => {
+                msg.innerHTML = ""
+            }, 8000)
+            form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+</body>
+</html>
