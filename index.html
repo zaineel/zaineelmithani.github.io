@@ -15,13 +15,15 @@
         <div class="container">
             <nav>
                 <img src="/zaineelmithani.github.io/assets/images/logo.PNG" class="logo">
-                <ul>
+                <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closeMenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openMenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Full-Stack Developer</p>
@@ -232,6 +234,18 @@
             })
             .catch(error => console.error('Error!', error.message))
         })
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openMenu() {
+            sidemenu.style.right = "0";
+        }
+
+        function closeMenu() {
+            sidemenu.style.right = "-200px";
+        }
     </script>
 
 </body>
