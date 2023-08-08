@@ -148,6 +148,17 @@ nav ul li a:hover::after{
     display: none;
 }
 
+.tab-contents ul li a{
+    text-decoration: none;
+    color: #17e6ea; /* text color */
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.tab-contents ul li a:hover{
+    color: #fff; /* text color */
+}
+
 .tab-contents.active-tab{
     display: block;
 }
