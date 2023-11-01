@@ -6,6 +6,18 @@
     box-sizing: border-box;  
 }
 
+.revealable {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+  }
+  
+  .revealable.reveal {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
 body{
     background: #080808;
     color:  #fff; /* text color */
@@ -445,3 +457,4 @@ nav .fas{
         font-size: 14px;
     }
 }
+
