@@ -21,6 +21,6 @@ const reveal = () => {
         revealableContainers[i].classList.remove("active");
       }
     }
-  }
+}
   
-  window.addEventListener("scroll", reveal);
+window.addEventListener("scroll", reveal);

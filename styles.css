@@ -387,6 +387,20 @@ nav .fas{
     display: none; 
 }
 
+.revealable{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.active{
+    transform: translateY(0px);
+    opacity: 1;
+
+}
+
+
 /* for the Media Queries */ /* for small screens */
 @media only screen and (max-width: 600px){
     .header-text{
