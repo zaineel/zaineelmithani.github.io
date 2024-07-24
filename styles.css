@@ -234,7 +234,7 @@ nav ul li a:hover::after {
 
 .portfolio-image {
   width: 100%;
-  height: 45px; /* Set a fixed height */
+  height: 500px; /* Set a fixed height */
   object-fit: cover; /* Ensure the image covers the set dimensions */
   border-radius: 10px;
   display: block;
