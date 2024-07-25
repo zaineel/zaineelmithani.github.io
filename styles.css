@@ -226,6 +226,26 @@ nav ul li a:hover::after {
   margin-top: 50px;
 }
 
+.scroll-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  border: 1px solid #080808;
+  padding: 10px;
+  background-color: #080808;
+}
+
+.scroll-content {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.work {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+  width: 500px;
+}
+
 .work {
   border-radius: 10px;
   position: relative;
@@ -294,6 +314,10 @@ nav ul li a:hover::after {
   font-weight: 500;
   margin-top: 20px;
   display: inline-block; /* for the button to be inline */
+}
+
+.layer p {
+  white-space: normal;
 }
 
 .work:hover img {
