@@ -89,7 +89,8 @@
                 <li><span>AI Development</span><br />PyTorch</li>
                 <li>
                   <span>Other</span><br />Git • GitHub • Jira • Docker • AWS
-                  <br />Kubernetes • Respell • Twilio
+                  <br />Kubernetes • Respell • Twilio • ARMv7 Assembly •
+                  Rasberrypi
                 </li>
               </ul>
             </div>
@@ -405,107 +406,6 @@
         <p>&copy; 2023 Zaineel Mithani. All rights reserved.</p>
       </div>
     </div>
-
-    <script>
-      var tabLinks = document.getElementsByClassName("tab-links");
-      var tabContents = document.getElementsByClassName("tab-contents");
-
-      function openTab(tabName) {
-        for (tabLink of tabLinks) {
-          tabLink.classList.remove("active-link");
-        }
-        for (tabContent of tabContents) {
-          tabContent.classList.remove("active-tab");
-        }
-
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabName).classList.add("active-tab");
-      }
-    </script>
-
-    <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbwS28m3wJ0kv9O_RzViyz9mCeRUzAZHGInnoXFGTtVnYeDx0BW0rQSxLNnz67vOOofTGw/exec";
-      const form = document.forms["submit-to-google-sheet"];
-      const msg = document.getElementById("msg");
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => {
-            msg.innerHTML =
-              "Thank you for your message! I will get back to you as soon as possible.";
-            setTimeout(() => {
-              msg.innerHTML = "";
-            }, 8000);
-            form.reset();
-          })
-          .catch((error) => console.error("Error!", error.message));
-      });
-    </script>
-
-    <script>
-      var sidemenu = document.getElementById("sidemenu");
-
-      function openMenu() {
-        sidemenu.style.right = "0";
-      }
-
-      function closeMenu() {
-        sidemenu.style.right = "-200px";
-      }
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const scrollContainer = document.querySelector(".scroll-container");
-
-        let isScrolling;
-        let autoScroll;
-        let scrollDirection = 1;
-
-        const startAutoScroll = () => {
-          autoScroll = setInterval(() => {
-            const maxScrollLeft =
-              scrollContainer.scrollWidth - scrollContainer.clientWidth;
-            if (scrollContainer.scrollLeft >= maxScrollLeft) {
-              scrollDirection = -1;
-            } else if (scrollContainer.scrollLeft <= 0) {
-              scrollDirection = 1;
-            }
-            scrollContainer.scrollLeft += scrollDirection; // Adjust scroll speed here
-          }, 10); // Adjust interval for smoother or faster scrolling
-        };
-
-        const stopAutoScroll = () => {
-          clearInterval(autoScroll);
-        };
-
-        const stopAutoScrollOnInteraction = () => {
-          stopAutoScroll();
-          clearTimeout(isScrolling);
-
-          // Set a timeout to restart auto-scroll if no interaction happens within 5 seconds
-          isScrolling = setTimeout(() => {
-            startAutoScroll();
-          }, 5000);
-        };
-
-        // Start auto-scrolling initially
-        startAutoScroll();
-
-        // Listen for user interactions
-        scrollContainer.addEventListener("wheel", stopAutoScrollOnInteraction);
-        scrollContainer.addEventListener(
-          "touchstart",
-          stopAutoScrollOnInteraction
-        );
-        scrollContainer.addEventListener(
-          "mousedown",
-          stopAutoScrollOnInteraction
-        );
-      });
-    </script>
 
     <script src="index.js"></script>
   </body>
