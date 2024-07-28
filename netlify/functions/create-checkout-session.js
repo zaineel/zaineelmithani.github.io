@@ -1,4 +1,4 @@
-const stripe = require("stripe")(process.env.api_key);
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 exports.handler = async (event, context) => {
   try {
@@ -10,6 +10,7 @@ exports.handler = async (event, context) => {
             currency: "usd",
             product_data: {
               name: "Appointment Booking",
+              description: "Book an appointment for our services",
             },
             unit_amount: 10000, // $100.00 in cents
           },
@@ -25,10 +26,10 @@ exports.handler = async (event, context) => {
       statusCode: 200,
       body: JSON.stringify({ id: session.id }),
     };
-  } catch (err) {
+  } catch (error) {
     return {
-      statusCode: 400,
-      body: JSON.stringify({ error: err.message }),
+      statusCode: 500,
+      body: JSON.stringify({ error: error.message }),
     };
   }
 };

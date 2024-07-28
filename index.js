@@ -117,32 +117,32 @@ document.addEventListener("DOMContentLoaded", () => {
   scrollContainer.addEventListener("mousedown", stopAutoScrollOnInteraction);
 });
 
-// stripe
-var stripe = Stripe(
-  "pk_test_51PhEao2M9YgZ81xN4Wrh4015KUdytZhxrEU9yJT09dxdQ4BrOq0fMID3Wx9339z155DqPzAUTdaineJpAbaZPyFe00MxqVQ8el"
-);
+// Stripe integration
+document.addEventListener("DOMContentLoaded", function () {
+  var stripe = Stripe(
+    "pk_test_51PhEao2M9YgZ81xN4Wrh4015KUdytZhxrEU9yJT09dxdQ4BrOq0fMID3Wx9339z155DqPzAUTdaineJpAbaZPyFe00MxqVQ8el"
+  );
 
-document
-  .getElementById("book-appointment")
-  .addEventListener("click", function () {
-    fetch(
-      "https://your-netlify-site.netlify.app/.netlify/functions/create-checkout-session",
-      {
+  var bookButtons = document.querySelectorAll(".book-appointment");
+  bookButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      fetch("/.netlify/functions/create-checkout-session", {
         method: "POST",
-      }
-    )
-      .then(function (response) {
-        return response.json();
       })
-      .then(function (session) {
-        return stripe.redirectToCheckout({ sessionId: session.id });
-      })
-      .then(function (result) {
-        if (result.error) {
-          alert(result.error.message);
-        }
-      })
-      .catch(function (error) {
-        console.error("Error:", error);
-      });
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (session) {
+          return stripe.redirectToCheckout({ sessionId: session.id });
+        })
+        .then(function (result) {
+          if (result.error) {
+            alert(result.error.message);
+          }
+        })
+        .catch(function (error) {
+          console.error("Error:", error);
+        });
+    });
   });
+});
