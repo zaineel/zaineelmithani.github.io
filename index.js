@@ -152,28 +152,27 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// set image src
-function setImageSrc(imgElement, primaryPath, fallbackPath) {
-  // Create a new image object
+// Define the setImageSrc function once
+function setImageSrc(element, primaryPath, fallbackPath, isBackground = false) {
   var img = new Image();
-
-  // Set up the onload handler
   img.onload = function () {
-    // If the image loads successfully, set the src to the primary path
-    imgElement.src = primaryPath;
+    if (isBackground) {
+      element.style.backgroundImage = "url('" + primaryPath + "')";
+    } else {
+      element.src = primaryPath;
+    }
   };
-
-  // Set up the onerror handler
   img.onerror = function () {
-    // If the image fails to load, set the src to the fallback path
-    imgElement.src = fallbackPath;
+    if (isBackground) {
+      element.style.backgroundImage = "url('" + fallbackPath + "')";
+    } else {
+      element.src = fallbackPath;
+    }
   };
-
-  // Start loading the image
   img.src = primaryPath;
 }
 
-// Use this function for each image when the DOM is fully loaded
+// Use the function for each image when the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
   var logoImg = document.querySelector(".logo"); // Adjust the selector as needed
   setImageSrc(
@@ -182,35 +181,18 @@ document.addEventListener("DOMContentLoaded", function () {
     "/assets/images/logo.PNG"
   );
 
-  // You can repeat this for other images that need similar handling
-});
-
-document.addEventListener("DOMContentLoaded", function () {
   var sidebarImg = document.querySelector(".side-image");
   setImageSrc(
     sidebarImg,
     "/zaineelmithani.github.io/assets/images/IMG_0961.jpg",
     "/assets/images/IMG_0961.jpg"
   );
-});
 
-// Update the setImageSrc function to accept an element
-function setImageSrc(element, primaryPath, fallbackPath) {
-  var img = new Image();
-  img.onload = function () {
-    element.style.backgroundImage = "url('" + primaryPath + "')";
-  };
-  img.onerror = function () {
-    element.style.backgroundImage = "url('" + fallbackPath + "')";
-  };
-  img.src = primaryPath;
-}
-
-document.addEventListener("DOMContentLoaded", function () {
   var headerElement = document.getElementById("header");
   setImageSrc(
     headerElement,
     "/zaineelmithani.github.io/assets/images/IMG_2887.jpg",
-    "/assets/images/IMG_2887.jpg"
+    "/assets/images/IMG_2887.jpg",
+    true // Set to true for background images
   );
 });
