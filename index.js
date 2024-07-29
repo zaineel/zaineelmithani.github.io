@@ -194,11 +194,22 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 });
 
+// Update the setImageSrc function to accept an element
+function setImageSrc(element, primaryPath, fallbackPath) {
+  var img = new Image();
+  img.onload = function () {
+    element.style.backgroundImage = "url('" + primaryPath + "')";
+  };
+  img.onerror = function () {
+    element.style.backgroundImage = "url('" + fallbackPath + "')";
+  };
+  img.src = primaryPath;
+}
+
 document.addEventListener("DOMContentLoaded", function () {
-  var cssBackgroundImg =
-    document.getElementById("header").style.backgroundImage;
+  var headerElement = document.getElementById("header");
   setImageSrc(
-    cssBackgroundImg,
+    headerElement,
     "/zaineelmithani.github.io/assets/images/IMG_2887.jpg",
     "/assets/images/IMG_2887.jpg"
   );
