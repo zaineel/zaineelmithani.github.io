@@ -27,6 +27,7 @@ exports.handler = async (event, context) => {
       body: JSON.stringify({ id: session.id }),
     };
   } catch (error) {
+    console.error("Stripe session creation error:", error);
     return {
       statusCode: 500,
       body: JSON.stringify({ error: error.message }),

@@ -133,7 +133,11 @@ document.addEventListener("DOMContentLoaded", function () {
           return response.json();
         })
         .then(function (session) {
-          return stripe.redirectToCheckout({ sessionId: session.id });
+          if (session.id) {
+            return stripe.redirectToCheckout({ sessionId: session.id });
+          } else {
+            throw new Error("Failed to create checkout session");
+          }
         })
         .then(function (result) {
           if (result.error) {
@@ -142,6 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .catch(function (error) {
           console.error("Error:", error);
+          alert("An error occurred. Please try again.");
         });
     });
   });
