@@ -193,3 +193,13 @@ document.addEventListener("DOMContentLoaded", function () {
     "/assets/images/IMG_0961.jpg"
   );
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  var cssBackgroundImg =
+    document.getElementById("header").style.backgroundImage;
+  setImageSrc(
+    cssBackgroundImg,
+    "/zaineelmithani.github.io/assets/images/IMG_2887.jpg",
+    "/assets/images/IMG_2887.jpg"
+  );
+});
